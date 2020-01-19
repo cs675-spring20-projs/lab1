@@ -100,7 +100,21 @@ from <tt>DoService()</tt>.
 </p>
 
 <p>
-Then build your first Lambda plugin function library with the
+To build your plugin Lambda function library, make sure the
+environmental variable <tt>$GOPATH</tt> has been correctly
+configured:
+
+<pre>
+$ cd cs675-spring20-labs
+$ ls
+README.md src
+# Go needs $GOPATH to be set to the directory containing "src"
+$ export GOPATH="$PWD"
+$ cd src
+</pre>
+
+<p>
+Then build your first plugin Lambda function library with the
 following commands:
 <pre>
 $ cd plugins/
