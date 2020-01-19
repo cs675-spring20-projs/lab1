@@ -10,7 +10,7 @@ in distributed systems.
 <h2>Software</h2>
 <p>
 You'll implement this Lab (and all the Labs) in  <a
-href="http://www.golang.org/">Go</a>. The Go web site contains lots
+href="http://www.golang.org/">Go</a>. The Go website contains lots
 of tutorial information which you may want to look at.
 </p>
 
@@ -85,4 +85,15 @@ modules. In other words, any helper functions must reside within
 these listed files.
 </p> 
 
+<h2>Implementation</h2>
 
+<h3>Part A: A Hello World Lambda plugin</h3>
+
+<p>
+We supply you a <tt>helloworld_service</tt> Lambda plugin file, which
+is missing the basic logic in <tt>DoService()</tt>. The first task
+you need to accomplish is to fix that simple piece by adding logic to
+deserialize (unmarshal) the argument passed in as a <tt>raw</tt>
+byte[] array. The second task is also easy peasy -- just to print out
+the deserialized task number from <tt>DoService()</tt>.
+</p>
