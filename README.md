@@ -90,10 +90,23 @@ these listed files.
 <h3>Part A: A Hello World Lambda plugin</h3>
 
 <p>
-We supply you a <tt>helloworld_service</tt> Lambda plugin file, which
-is missing the basic logic in <tt>DoService()</tt>. The first task
-you need to accomplish is to fix that simple piece by adding logic to
-deserialize (unmarshal) the argument passed in as a <tt>raw</tt>
-byte[] array. The second task is also easy peasy -- just to print out
-the deserialized task number from <tt>DoService()</tt>.
+Under <tt>plugins</tt>, we supply you a <tt>helloworld_service</tt>
+Lambda plugin file, which is missing the basic logic in
+<tt>DoService()</tt>. The first task you need to accomplish is to fix
+that simple piece by adding logic to deserialize (unmarshal) the
+argument passed in as a <tt>raw</tt> byte[] array. The second task is
+also easy peasy -- just to print out the deserialized task number
+from <tt>DoService()</tt>.
 </p>
+
+<p>
+Then build your first Lambda plugin function library with the
+following commands:
+<pre>
+$ cd plugins/
+$ go build --buildmode=plugin -o helloworld_service.so helloworld_service.go
+</pre>
+
+</p>
+
+<h3>Part B: 
