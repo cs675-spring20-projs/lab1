@@ -119,8 +119,25 @@ following commands:
 <pre>
 $ cd plugins/
 $ go build --buildmode=plugin -o helloworld_service.so helloworld_service.go
+$ ls
+helloworld_service.so helloworld_service.go
 </pre>
 
 </p>
 
-<h3>Part B: 
+<h3>Part B: Implement RPC-based Lambda plugin registration protocol</h3>
+
+<p>
+This part is to get you familiar with RPC distributed system
+programming using Go. 
+
+<p>
+First, the client part of the RPC protocol.
+The <tt>serverless/driver.go</tt> code we give you is missing one
+crucial piece: the function that register the plugin Lambda function
+that you have just implemented. The plugin registration logic is
+carried out by the <tt>registerService()</tt> function in
+<tt>serverless/driver.go</tt>. The comments in this file should point
+you in the right direction.
+
+</p>
