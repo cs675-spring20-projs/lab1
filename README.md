@@ -75,4 +75,14 @@ workers, and then shuts down its own RPC server.
 	</li>
 </ol>
 
+You should look through the files in the whole framework
+implementation, as reading them might be useful to understand how the
+other methods fit into the overall architecture of the system
+hierarchy. However, for this Lab, you will write/modify
+<strong>only</strong> <tt>driver.go</tt>, <tt>schedule.go</tt>, and
+<tt>worker.go</tt>. You will not be able to submit other files or
+modules. In other words, any helper functions must reside within
+these listed files.
 </p> 
+
+
