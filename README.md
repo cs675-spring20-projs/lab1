@@ -191,12 +191,13 @@ into the <tt>readyChan</tt>.
 
 Specifically, <tt>invokeService()</tt> is where the task dispatching
 really happens. Fill out the missing piece in there.  The next
-missing piece to be fixed is a <tt>for</tt> loop that loops over all the tasks,
-and use <tt>select</tt> inside of the <tt>for</tt> loop to select
-between two channels: <tt>registerChan</tt>, and <tt>readyChan</tt>.
-This is also where you get to connect the different pieces of the RPC
-framework together-- <tt>registerChan</tt> holds the workers that
-successfully get registered at the driver, and the task scheduler
-starts dragging workers from there.
+missing piece to be fixed is a <tt>for</tt> loop that loops over all the tasks;
+you may find <tt>select</tt> comes in handy: inside the <tt>for</tt>
+loop, the <tt>select</tt> switches between two event sources:
+<tt>registerChan</tt>, and <tt>readyChan</tt>.  This is also where
+you get to connect the different pieces of the RPC framework
+together-- <tt>registerChan</tt> holds the workers that successfully
+get registered at the driver, and the task scheduler starts dragging
+workers from there.
 
 </p>
