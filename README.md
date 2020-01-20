@@ -29,7 +29,7 @@ function.
 
 <h3>Getting familiar with the source</h3>
 <p>
-The serverless package (located at <tt>src/serverless</tt>) provides
+The serverless package (located at <tt>serverless</tt>) provides
 a simple serverless library with a partially implemented RPC plugin
 framework. Applications would normally call <tt>Run()</tt> located in
 <tt>serverless/driver.go</tt> to register a Lambda function (i.e., a 
@@ -107,10 +107,9 @@ configured:
 <pre>
 $ cd cs675-spring20-labs
 $ ls
-README.md src
-# Go needs $GOPATH to be set to the directory containing "src"
+README.md main/ plugins/ serverless/
+# Go needs $GOPATH to be set to the directory containing "main", "plugins", and "serverless".
 $ export GOPATH="$PWD"
-$ cd src
 </pre>
 
 <p>
@@ -204,8 +203,37 @@ initially starts dragging workers from.
 
 <p>
 You can test your implementation in a semi-distributed environment,
-where the client (and thus the driver) and the worker processes are
-running on the same server but communicate through TCP-based RPC.
+where the client (and thus the driver) and the worker are running as
+separate processes but on the same server but communicate through
+TCP-based RPC.
+
+To deploy, first, run the client as the application which creates a
+driver:
+
+<pre>
+$ cd main
+$ go run client.go localhost:1234 helloworld_service
+2020/01/20 02:39:37 rpc.Register: method "Lock" has 1 input parameters; needs exactly three
+2020/01/20 02:39:37 rpc.Register: method "Run" has 2 input parameters; needs exactly three
+2020/01/20 02:39:37 rpc.Register: method "Unlock" has 1 input parameters; needs exactly three
+2020/01/20 02:39:37 rpc.Register: method "Wait" has 1 input parameters; needs exactly three
+Driver: enter the worker registration service loop...
+</pre>
+
+Ignore the first four lines of the output. Driver is now running and
+waiting for workers to register.
+
+On a separate shell window, run one worker (you can deploy however
+many worker processes you like):
+
+<pre>
+$ go run worker.go localhost:1235 localhost:1234
+2020/01/20 02:44:06 rpc.Register: method "Lock" has 1 input parameters; needs exactly three
+2020/01/20 02:44:06 rpc.Register: method "Unlock" has 1 input parameters; needs exactly three
+Successfully registered worker localhost:1235
+Successfully registered new service helloworld_service
+...  # rest of the output ignored 
+</pre>
 
 </p>
 
