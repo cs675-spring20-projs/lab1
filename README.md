@@ -224,7 +224,9 @@ Ignore the first four lines of the output. Driver is now running and
 waiting for workers to register.
 
 On a separate shell window, run one worker (you can deploy however
-many worker processes you like):
+many worker processes you like) that listens on
+<tt>localhost:1235</tt> and connects to the driver located
+at <tt>localhost:1234</tt>:
 
 <pre>
 $ go run worker.go localhost:1235 localhost:1234
