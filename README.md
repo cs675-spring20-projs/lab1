@@ -191,7 +191,7 @@ into the <tt>readyChan</tt>.
 
 Specifically, <tt>invokeService()</tt> is where the task dispatching
 really happens. Fill out the missing piece in there.  The next
-missing piece is a <tt>for</tt> loop that loops over all the tasks,
+missing piece to be fixed is a <tt>for</tt> loop that loops over all the tasks,
 and use <tt>select</tt> inside of the <tt>for</tt> loop to select
 between two channels: <tt>registerChan</tt>, and <tt>readyChan</tt>.
 This is also where you get to connect the different pieces of the RPC
