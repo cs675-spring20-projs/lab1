@@ -208,7 +208,7 @@ separate processes but on the same server but communicate through
 TCP-based RPC.
 
 To deploy, first, run the client as the application which creates a
-driver:
+driver. The driver listens on <tt>localhost:1234</tt>:
 
 <pre>
 $ cd main
