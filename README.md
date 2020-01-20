@@ -270,3 +270,8 @@ purpose of calculating late days, and we will only grade that version of the
 code. (We'll also know if you backdate the tag, don't do that.)
 
 </p>
+
+<h2>Acknowledgements</h2>
+<p>Part of this lab is adapted from MIT's 6.824 course. Thanks to
+Frans Kaashoek, Robert Morris, and Nickolai Zeldovich for their
+support.</p>
