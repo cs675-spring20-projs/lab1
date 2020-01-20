@@ -141,10 +141,21 @@ carried out by the <tt>registerService()</tt> function in
 you in the right direction.
 
 <p>
-Second, the server part of the RPC protocol.
+Second, the worker's RPC server startup.
 Each worker has its own RPC server, which is created and started by
 calling the <tt>startRPCServer()</tt> function (see
 <tt>main/worker.go</tt>). You will need to finish the implementation
 of the <tt>startRPCServer()</tt> function at the worker side. Refer
 to the implementation of the driver's RPC server to get a sense.
+
+
+<p>
+Third, the worker-side RPC functions to register and invoke a plugin Lambda
+function service.
+Two functions, missing their core logic, need to be fixed: 
+<tt>RegisterService()</tt> and <tt>InvokeService()</tt>.
+In particular, <tt>RegisterService()</tt> uses Go's plugin feature
+to dynamically load the compiled library binary into the worker's
+address space. Read Go's <a href="https://golang.org/pkg/plugin/">package plugin</a>
+and learn how to use it in your code.
 </p>
