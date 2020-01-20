@@ -163,3 +163,18 @@ how to use it in your code.
 on the worker. You may find the comments in these two functions 
 helpful.
 </p>
+
+<h3>Part C: Task dispatching</h3>
+
+<p>
+Well, this part should really be called *dispatching* rather than
+*scheduling*, though what you will be looking at is a function called
+<tt>schedule()</tt> located at <tt>serverless/schedule.go</tt>. In
+this Lab, your code just simply needs to dispatch the task requests
+to the workers. In Lab 2, you will get to handle some level of
+phase-based scheduling.
+
+<p>
+
+
+</p>
