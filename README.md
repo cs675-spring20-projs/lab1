@@ -200,4 +200,57 @@ you get to connect the different pieces of the RPC framework together
 registered at the driver, and that is where the task scheduler
 initially starts dragging workers from.
 
+<h2>Resources and Advice</h2>
+<ul class="hints">
+  <li>
+    a good read on what strings are in Go is the
+    <a href="http://blog.golang.org/strings">Go Blog on strings</a>.
+  </li>
+  <li>
+    you can use
+    <a href="http://golang.org/pkg/strings/#FieldsFunc"><tt>strings.FieldsFunc</tt></a>
+    to split a string into components.
+  </li>
+  <li>
+    the <a href="http://golang.org/pkg/strconv/">strconv package</a>
+    is handy to convert strings to integers etc.
+  </li>
+</ul>
+
+## Point Distribution
+
+<table>
+<tr><th>Test</th><th>Points</th></tr>
+<tr><td>SequentialSingle</td><td>10</td></tr>
+<tr><td>SequentialMany</td><td>10</td></tr>
+<tr><td>test-wc.sh</td><td>10</td></tr>
+</table>
+
+## Submitting Assignment
+
+You hand in your assignment exactly as you've been letting us know
+your progress:
+
+```bash
+$ git commit -am "[you fill me in]"
+$ git tag -a -m "i finished assignment 1-2" a12-handin
+$ git push origin master a12-handin
+```
+
+You should verify that you are able to see your final commit and your
+a12-handin tag on the Github page in your repository for this
+assignment.
+
+<p>Recall, in order to overwrite a tag use the force flag as follows.</p>
+
+```bash
+$ git tag -fam "i finished assignment 1-2" a12-handin
+$ git push -f --tags
+```
+
+
+We will use the timestamp of your **last** tag for the
+purpose of calculating late days, and we will only grade that version of the
+code. (We'll also know if you backdate the tag, don't do that.)
+
 </p>
