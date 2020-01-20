@@ -200,6 +200,16 @@ you get to connect the different pieces of the RPC framework together
 registered at the driver, and that is where the task scheduler
 initially starts dragging workers from.
 
+<h2>Deployment and Testing</h2>
+
+<p>
+You can test your implementation in a semi-distributed environment,
+where the client (and thus the driver) and the worker processes are
+running on the same server but communicate through TCP-based RPC.
+
+</p>
+
+
 <h2>Resources and Advice</h2>
 <ul class="hints">
   <li>
