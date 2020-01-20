@@ -251,8 +251,8 @@ Successfully registered new service helloworld_service
     <a href="https://golang.org/pkg/plugin/">Go plugin package</a>.
   </li>
   <li>
-    read the <a href="https://gobyexample.com/select">Go by Example: Select</a>
-    is give you a sense about how <tt>select</tt> can be
+    read this short tutorial about <a href="https://gobyexample.com/select">Go by Example: Select</a>
+    to give you a sense about how <tt>select</tt> can be
 used in combination with goroutines.
   </li>
 </ul>
