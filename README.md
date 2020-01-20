@@ -164,7 +164,7 @@ on the worker. You may find the comments in these two functions
 helpful.
 </p>
 
-<h3>Part C: Task dispatching</h3>
+<h3>Part C: Task dispatching (scheduling :-)</h3>
 
 <p>
 Well, this part should really be called *dispatching* rather than
