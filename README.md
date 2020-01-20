@@ -221,7 +221,7 @@ used in combination with goroutines.
 
 TBD
 
-## Submitting Assignment
+## Submitting Lab 1
 
 TBD
 
