@@ -167,12 +167,12 @@ helpful.
 <h3>Part C: Task scheduling (or dispatching :-)</h3>
 
 <p>
-Well, this part should really be called *dispatching* rather than
-*scheduling*, though what you will be looking at is a function called
-<tt>schedule()</tt> located at <tt>serverless/schedule.go</tt>. In
-this Lab, your code just simply needs to dispatch the task requests
-to the workers. In Lab 2, you will get to handle some level of
-phase-based scheduling.
+Well, this part should really be called <strong>dispatching</strong>
+rather than *scheduling*, though what you will be looking at is a
+function called <tt>schedule()</tt> located at
+<tt>serverless/schedule.go</tt>. In this Lab, your code just simply
+needs to dispatch the task requests to the workers. In Lab 2, you
+will get to handle some level of phase-based scheduling.
 
 <p>
 The <tt>schedule()</tt> function is called from the
