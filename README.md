@@ -207,13 +207,13 @@ initially starts dragging workers from.
     <a href="http://blog.golang.org/strings">Go Blog on strings</a>.
   </li>
   <li>
-    you can use
-    <a href="http://golang.org/pkg/strings/#FieldsFunc"><tt>strings.FieldsFunc</tt></a>
-    to split a string into components.
+	read the document of 
+    <a href="https://golang.org/pkg/plugin/"><tt>Go plugin package</tt></a>.
   </li>
   <li>
-    the <a href="http://golang.org/pkg/strconv/">strconv package</a>
-    is handy to convert strings to integers etc.
+    the <a href="https://gobyexample.com/select">Go by Example: Select</a>
+    is handy to give you a sense about how <tt>select</tt> can be
+used in combination with goroutines.
   </li>
 </ul>
 
