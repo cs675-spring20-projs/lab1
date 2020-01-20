@@ -175,6 +175,28 @@ to the workers. In Lab 2, you will get to handle some level of
 phase-based scheduling.
 
 <p>
+The <tt>schedule()</tt> function is called from the
+<tt>driver.go</tt> file to dispatch a configurable number (though it
+is hard-coded as 10) of tasks that have already been registered and
+loaded into the workers. 
 
+We provide you with a code template that defines the Lambda plugin's
+parameter struct, declares a <tt>readyChan</tt> to track the
+workers that are ready to execute a task. Your task is to finish the
+implementation of the <tt>schedule()</tt> function so that the driver
+dispatches a total of <tt>nTasks</tt> tasks across a cluster of
+workers available, in a FIFO (First-in First-out) manner -- whichever
+worker completes its previously assigned task will get enqueued back
+into the <tt>readyChan</tt>. 
+
+Specifically, <tt>invokeService()</tt> is where the task dispatch
+really happens. Fill out the missing piece in there.
+The next missing piece is a <tt>for</tt> loop that loops over all the tasks,
+and use <tt>select</tt> inside of the <tt>for</tt> loop to select
+between two channels: <tt>registerChan</tt>, and <tt>readyChan</tt>. 
+This is also where you get to connect the different pieces of the RPC
+framework together-- <tt>registerChan</tt> holds the workers that
+successfully get registered at the driver, and the task scheduler
+starts dragging workers from there.
 
 </p>
