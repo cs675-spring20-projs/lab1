@@ -195,9 +195,9 @@ missing piece to be fixed is a <tt>for</tt> loop that loops over all the tasks;
 you may find <tt>select</tt> comes in handy: inside the <tt>for</tt>
 loop, the <tt>select</tt> switches between two event sources:
 <tt>registerChan</tt>, and <tt>readyChan</tt>.  This is also where
-you get to connect the different pieces of the RPC framework
-together -- <tt>registerChan</tt> holds the workers that successfully
-get registered at the driver, and that is where the task scheduler starts dragging
-workers from.
+you get to connect the different pieces of the RPC framework together
+-- <tt>registerChan</tt> holds the workers that successfully get
+registered at the driver, and that is where the task scheduler
+initially starts dragging workers from.
 
 </p>
