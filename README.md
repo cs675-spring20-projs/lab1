@@ -189,11 +189,11 @@ workers available, in a FIFO (First-in First-out) manner -- whichever
 worker completes its previously assigned task will get enqueued back
 into the <tt>readyChan</tt>. 
 
-Specifically, <tt>invokeService()</tt> is where the task dispatch
-really happens. Fill out the missing piece in there.
-The next missing piece is a <tt>for</tt> loop that loops over all the tasks,
+Specifically, <tt>invokeService()</tt> is where the task dispatching
+really happens. Fill out the missing piece in there.  The next
+missing piece is a <tt>for</tt> loop that loops over all the tasks,
 and use <tt>select</tt> inside of the <tt>for</tt> loop to select
-between two channels: <tt>registerChan</tt>, and <tt>readyChan</tt>. 
+between two channels: <tt>registerChan</tt>, and <tt>readyChan</tt>.
 This is also where you get to connect the different pieces of the RPC
 framework together-- <tt>registerChan</tt> holds the workers that
 successfully get registered at the driver, and the task scheduler
