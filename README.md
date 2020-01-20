@@ -243,8 +243,8 @@ Successfully registered new service helloworld_service
 <h2>Resources and Advice</h2>
 <ul class="hints">
   <li>
-    a good read on what strings are in Go is the
-    <a href="http://blog.golang.org/strings">Go Blog on strings</a>.
+    a good read on Go's concurrency patterns:
+    <a href="https://blog.golang.org/pipelines">Go Blog on concurrency</a>.
   </li>
   <li>
 	read the document of 
