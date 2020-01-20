@@ -153,9 +153,13 @@ to the implementation of the driver's RPC server to get a sense.
 Third, the worker-side RPC functions to register and invoke a plugin Lambda
 function service.
 Two functions, missing their core logic, need to be fixed: 
-<tt>RegisterService()</tt> and <tt>InvokeService()</tt>.
-In particular, <tt>RegisterService()</tt> uses Go's plugin feature
-to dynamically load the compiled library binary into the worker's
-address space. Read Go's <a href="https://golang.org/pkg/plugin/">package plugin</a>
-and learn how to use it in your code.
+<tt>RegisterService()</tt> and <tt>InvokeService()</tt>.  In
+particular, <tt>RegisterService()</tt> uses Go's plugin feature to
+dynamically load the compiled library binary into the worker's
+address space. Read Go's <a
+href="https://golang.org/pkg/plugin/">package plugin</a> and learn
+how to use it in your code.
+<tt>InvokeService()</tt> is called when the driver schedules a task
+on the worker. You may find the comments in these two functions 
+helpful.
 </p>
