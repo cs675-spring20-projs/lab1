@@ -197,7 +197,7 @@ loop, the <tt>select</tt> switches between two event sources:
 <tt>registerChan</tt>, and <tt>readyChan</tt>.  This is also where
 you get to connect the different pieces of the RPC framework
 together -- <tt>registerChan</tt> holds the workers that successfully
-get registered at the driver, and the task scheduler starts dragging
-workers from there.
+get registered at the driver, and that is where the task scheduler starts dragging
+workers from.
 
 </p>
