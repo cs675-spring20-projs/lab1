@@ -24,28 +24,33 @@ func checkError(err error) {
 	}
 }
 
-// (Lab 2) jobPhase indicates whether a task is scheduled as a map or reduce task.
+// (Lab 2 only) jobPhase indicates whether a task is scheduled as a
+// map or reduce task.
 type jobPhase string
 
+// (Lab 2 only) jobPhase indicates whether a task is scheduled as a
+// map or reduce task.
 const (
 	mapPhase    jobPhase = "Map"
 	reducePhase          = "Reduce"
 )
 
-// (Lab 2) KeyValue is a type used to hold the key/value pairs passed to the map and
-// reduce functions.
+// (Lab 2 only) KeyValue is a type used to hold the key/value pairs
+// passed to the map and reduce functions.
 type KeyValue struct {
 	Key   string
 	Value string
 }
 
-// (Lab 2) reduceName constructs the name of the intermediate file which map task
-// <mapTask> produces for reduce task <reduceTask>.
+// (Lab 2 only) reduceName constructs the name of the intermediate
+// file which map task <mapTask> produces for reduce task
+// <reduceTask>.
 func reduceName(jobName string, mapTask int, reduceTask int) string {
 	return "mrtmp." + jobName + "-" + strconv.Itoa(mapTask) + "-" + strconv.Itoa(reduceTask)
 }
 
-// (Lab 2) mergeName constructs the name of the output file of reduce task <reduceTask>
+// (Lab 2 only) mergeName constructs the name of the output file of
+// reduce task <reduceTask>
 func mergeName(jobName string, reduceTask int) string {
 	return "mr." + jobName + "-res-" + strconv.Itoa(reduceTask)
 }
