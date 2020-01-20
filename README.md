@@ -248,7 +248,7 @@ Successfully registered new service helloworld_service
   </li>
   <li>
 	read the document of 
-    <a href="https://golang.org/pkg/plugin/"><tt>Go plugin package</tt></a>.
+    <a href="https://golang.org/pkg/plugin/">Go plugin package</a>.
   </li>
   <li>
     read the <a href="https://gobyexample.com/select">Go by Example: Select</a>
