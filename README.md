@@ -140,4 +140,11 @@ carried out by the <tt>registerService()</tt> function in
 <tt>serverless/driver.go</tt>. The comments in this file should point
 you in the right direction.
 
+<p>
+Second, the server part of the RPC protocol.
+Each worker has its own RPC server, which is created and started by
+calling the <tt>startRPCServer()</tt> function (see
+<tt>main/worker.go</tt>). You will need to finish the implementation
+of the <tt>startRPCServer()</tt> function at the worker side. Refer
+to the implementation of the driver's RPC server to get a sense.
 </p>
