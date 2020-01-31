@@ -104,23 +104,24 @@ To build your plugin Lambda function library, make sure the
 environmental variable <tt>$GOPATH</tt> has been correctly
 configured:
 
-<pre>
+```bash
 $ cd cs675-spring20-labs
 $ ls
 README.md main/ plugins/ serverless/
 # Go needs $GOPATH to be set to the directory containing "main", "plugins", and "serverless".
 $ export GOPATH="$PWD"
-</pre>
+```
 
 <p>
 Then build your first plugin Lambda function library with the
 following commands:
-<pre>
+
+```bash
 $ cd plugins/
 $ go build --buildmode=plugin -o helloworld_service.so helloworld_service.go
 $ ls
 helloworld_service.so helloworld_service.go
-</pre>
+```
 
 </p>
 
@@ -210,7 +211,7 @@ TCP-based RPC.
 To deploy, first, run the client as the application which creates a
 driver. The driver listens on <tt>localhost:1234</tt>:
 
-<pre>
+```bash
 $ cd main
 $ go run client.go localhost:1234 helloworld_service
 2020/01/20 02:39:37 rpc.Register: method "Lock" has 1 input parameters; needs exactly three
@@ -218,7 +219,7 @@ $ go run client.go localhost:1234 helloworld_service
 2020/01/20 02:39:37 rpc.Register: method "Unlock" has 1 input parameters; needs exactly three
 2020/01/20 02:39:37 rpc.Register: method "Wait" has 1 input parameters; needs exactly three
 Driver: enter the worker registration service loop...
-</pre>
+```
 
 Ignore the first four lines of the output. Driver is now running and
 waiting for workers to register.
@@ -228,14 +229,14 @@ many worker processes you like) that listens on
 <tt>localhost:1235</tt> and connects to the driver located
 at <tt>localhost:1234</tt>:
 
-<pre>
+```bash
 $ go run worker.go localhost:1235 localhost:1234
 2020/01/20 02:44:06 rpc.Register: method "Lock" has 1 input parameters; needs exactly three
 2020/01/20 02:44:06 rpc.Register: method "Unlock" has 1 input parameters; needs exactly three
 Successfully registered worker localhost:1235
 Successfully registered new service helloworld_service
 ...  # rest of the output ignored 
-</pre>
+```
 
 </p>
 
@@ -259,15 +260,42 @@ used in combination with goroutines.
 
 ## Point Distribution
 
-TBD
+<table>
+<tr><th>Component</th><th>Points</th></tr>
+<tr><td>Driver-to-Worker RPC</td><td>15</td></tr>
+<tr><td>Scheduler</td><td>10</td></tr>
+<tr><td>Plugin</td><td>5</td></tr>
+</table>
+
 
 ## Submitting Lab 1
 
-TBD
+1. **Submit the electronic version**
+
+You hand in your lab assignment exactly as you've been letting us know your progress:
+
+```bash
+$ git commit -am "[you fill me in]"
+$ git tag -a -m "i finished lab 1" lab1-handin
+$ git push origin master lab-handin
+```
+
+You should verify that you are able to see your final commit and your
+lab1-handin tag on the GitLab page in your repository for this lab.
 
 We will use the timestamp of your **last** tag for the
 purpose of calculating late days, and we will only grade that version of the
 code. (We'll also know if you backdate the tag, don't do that.)
+
+You will need to share your private repository with our me (the instructor)
+(my GitLab ID is the same as my mason email ID: `yuecheng`).
+
+2. **Schedule a meeting and discuss**
+
+As a second part of the submission, you'll meet with me and explain what you
+did for Lab 1. Hopefully we will use the office hour for this
+after the due of Lab 1. We will also have a signup sheet as the date 
+approaches, and I'll also give a little more detail in class.
 
 </p>
 
